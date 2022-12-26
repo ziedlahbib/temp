@@ -9,9 +9,11 @@ import {AccordionModule} from 'primeng/accordion';     //accordion and accordion
 import {MenuItem} from 'primeng/api';
 import { RouterModule } from '@angular/router';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    
     
   ],
   imports: [
