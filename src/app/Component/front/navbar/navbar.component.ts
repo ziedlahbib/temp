@@ -1,14 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
+import { MenubarModule } from 'primeng/menubar';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
+
 export class NavbarComponent implements OnInit {
 
+  nom="zied"
   items: MenuItem[] = [];
+  item: MenuItem[] = [];
   constructor() { }
 
   ngOnInit(): void {
@@ -140,6 +144,33 @@ export class NavbarComponent implements OnInit {
           icon:'pi pi-fw pi-power-off'
       }
   ];
+  ///////////////////////////////////////////////////////
+  this.item = [
+
+    {
+        label:this.nom,
+        icon:'assets/images.png',
+        items:[
+            {
+                label:'Left',
+                icon:'pi pi-fw pi-align-left'
+            },
+            {
+                label:'Right',
+                icon:'pi pi-fw pi-align-right'
+            },
+            {
+                label:'Center',
+                icon:'pi pi-fw pi-align-center'
+            },
+            {
+                label:'Justify',
+                icon:'pi pi-fw pi-align-justify'
+            },
+
+        ]
+    },
+];
 }
 
 }
