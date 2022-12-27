@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
-import {MenuItem} from 'primeng/api';
 import { RouterModule } from '@angular/router';
+
 
 
 
@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
+
   
     
     

@@ -11,6 +11,8 @@ import {AvatarModule} from 'primeng/avatar';
 import {AvatarGroupModule} from 'primeng/avatargroup';
 import {ButtonModule} from 'primeng/button';
 import {MenuModule} from 'primeng/menu';
+import { HomeComponent } from 'src/app/pages/home/home.component';
+import { ChipModule } from 'primeng/chip';
 
 
 
@@ -21,6 +23,7 @@ import {MenuModule} from 'primeng/menu';
     UserLayoutComponent,
     NavbarComponent,
     FooterComponent,
+    HomeComponent,
     
     
     
@@ -33,7 +36,8 @@ import {MenuModule} from 'primeng/menu';
     AvatarModule,
     AvatarGroupModule,
     ButtonModule,
-    MenuModule
+    MenuModule,
+    ChipModule
    
 
     
