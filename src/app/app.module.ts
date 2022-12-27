@@ -10,9 +10,11 @@ import {MenuItem} from 'primeng/api';
 import { RouterModule } from '@angular/router';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    
     
     
   ],
