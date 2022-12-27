@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { UserLayoutRoutingModule } from './user-layout-routing.module';
 import { UserLayoutComponent } from './user-layout.component';
 import { NavbarComponent } from 'src/app/Component/front/navbar/navbar.component';
@@ -15,6 +14,16 @@ import { HomeComponent } from 'src/app/pages/home/home.component';
 import { ChipModule } from 'primeng/chip';
 import { GalleriaModule } from 'primeng/galleria';
 import {CardModule} from 'primeng/card';
+import {CarouselModule} from 'primeng/carousel';
+import {SplitButtonModule} from 'primeng/splitbutton';
+import {DataViewModule} from 'primeng/dataview';
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 
@@ -34,6 +43,8 @@ import {CardModule} from 'primeng/card';
   imports: [
     CommonModule,
     UserLayoutRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     MenubarModule,
     InputTextModule,
     AvatarModule,
@@ -42,7 +53,17 @@ import {CardModule} from 'primeng/card';
     MenuModule,
     ChipModule,
     GalleriaModule,
-    CardModule
+    CardModule,
+    CarouselModule,
+    SplitButtonModule,
+    DataViewModule,
+    DropdownModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+  
+    
 
    
 

@@ -1,5 +1,52 @@
-.center{
-    position: absolute;
-    right: 500px;
-    top:250px;
+.product-item {
+    .product-item-content {
+        border: 1px solid var(--surface-d);
+        border-radius: 3px;
+        margin: .3rem;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .product-image {
+        width: 50%;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+    }
+}
+///////////////////////////////////////
+:host ::ng-deep .p-button {
+    margin-right: .5rem;
+}
+
+:host ::ng-deep .p-buttonset {
+    .p-button {
+        margin-right: 0;
+    }
+}
+
+:host ::ng-deep .sizes {
+    .button {
+        margin-bottom: .5rem;
+        display: block;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .p-button {
+        margin-bottom: .5rem;
+
+        &:not(.p-button-icon-only) {
+            display: flex;
+            width: 100%;
+        }
+    }
+
+    .p-buttonset {
+        .p-button {
+            margin-bottom: 0;
+        }
+    }
 }
