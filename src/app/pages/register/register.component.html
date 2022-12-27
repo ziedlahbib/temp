@@ -12,37 +12,50 @@
                 <form class="mx-1 mx-md-4">
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="pi pi-user"></i>
-                    <span class="p-float-label">
-                      <input id="float-input" type="text" pInputText> 
-                      <label for="float-input">First Name</label>
-                  </span>
+                    <div class="p-inputgroup">
+                      <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                      <span class="p-float-label">
+                        <input id="float-input" type="text" pInputText> 
+                        <label for="float-input">First Name</label>
+                      </span>        
+                    </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="pi pi-user"></i>
-                    <span class="p-float-label">
-                      <input id="float-input" type="text" pInputText> 
-                      <label for="float-input">Last Name</label>
-                   </span>
-                  </div>
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="pi pi-inbox"></i>
-                    <span class="p-float-label">
-                      <input id="float-input" type="text" pInputText> 
-                      <label for="float-input">email</label>
-                   </span>
+                    <div class="p-inputgroup">
+                      <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                      <span class="p-float-label">
+                        <input id="float-input" type="text" pInputText> 
+                        <label for="float-input">Last Name</label>
+                      </span>        
+                    </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="pi pi-lock"></i>
-                    <p-password  [toggleMask]="true"></p-password>
+                    <div class="p-inputgroup">
+                      <span class="p-inputgroup-addon"><i class="pi pi-inbox"></i></span>
+                      <span class="p-float-label">
+                        <span class="p-float-label">
+                          <input id="float-input" type="text" pInputText> 
+                          <label for="float-input">email</label>
+                       </span> 
+                      </span>        
+                    </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="pi pi-lock"></i>
-                    <p-password  [toggleMask]="true"></p-password>
+                    <div class="p-inputgroup">
+                        <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+                        <input type="text" pInputText placeholder="password">       
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <div class="p-inputgroup">
+                      <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+                      <input type="text" pInputText placeholder="repeat password">       
                   </div>
+              </div>
 
                   <div class="form-check d-flex justify-content-center mb-5">
                     <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
