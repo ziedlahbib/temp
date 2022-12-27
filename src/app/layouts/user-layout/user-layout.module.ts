@@ -13,6 +13,9 @@ import {ButtonModule} from 'primeng/button';
 import {MenuModule} from 'primeng/menu';
 import { HomeComponent } from 'src/app/pages/home/home.component';
 import { ChipModule } from 'primeng/chip';
+import { GalleriaModule } from 'primeng/galleria';
+import {CardModule} from 'primeng/card';
+
 
 
 
@@ -37,7 +40,10 @@ import { ChipModule } from 'primeng/chip';
     AvatarGroupModule,
     ButtonModule,
     MenuModule,
-    ChipModule
+    ChipModule,
+    GalleriaModule,
+    CardModule
+
    
 
     
