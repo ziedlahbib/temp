@@ -8,6 +8,9 @@ import {InputTextModule} from 'primeng/inputtext';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {PasswordModule} from 'primeng/password';
 import { LoginComponent } from 'src/app/pages/login/login.component';
+import {ButtonModule} from 'primeng/button';
+import {TriStateCheckboxModule} from 'primeng/tristatecheckbox';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,10 +21,14 @@ import { LoginComponent } from 'src/app/pages/login/login.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     AuthLayoutRoutingModule,
     InputTextModule,
     InputTextareaModule,
-    PasswordModule
+    PasswordModule,
+    ButtonModule,
+    TriStateCheckboxModule
   ]
 })
 export class AuthLayoutModule { }
