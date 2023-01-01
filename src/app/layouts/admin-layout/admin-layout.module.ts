@@ -12,6 +12,8 @@ import {MenubarModule} from 'primeng/menubar';
 import {MenuModule} from 'primeng/menu';
 import { ChipModule } from 'primeng/chip';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { FooterBackComponent } from 'src/app/Component/back/footer-back/footer-back.component';
+
 
 
 
@@ -23,6 +25,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     SidenavComponent,
     NavbarBackComponent,
     BackofficeComponent,
+    FooterBackComponent
     
   ],
   imports: [
