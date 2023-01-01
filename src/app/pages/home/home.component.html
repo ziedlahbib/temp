@@ -1,6 +1,6 @@
 <div>
     <p-galleria [value]="images" [responsiveOptions]="responsiveOptions"    [numVisible]="5"> 
-        <ng-template pTemplate="item" let-item [(ngModel)]="item">
+        <ng-template pTemplate="item" let-item [(ngModel)]="item" name="item" ngDefaultControl>
             <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
         </ng-template>
         <ng-template pTemplate="thumbnail" let-item>

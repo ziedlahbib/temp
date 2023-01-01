@@ -61,7 +61,6 @@ export class HomeComponent implements OnInit {
         numVisible: 1
     }
 ];
-dataSource: MatTableDataSource<any>=new MatTableDataSource(this.images);;
   constructor() { }
 
   ngOnInit(): void {
@@ -69,7 +68,15 @@ dataSource: MatTableDataSource<any>=new MatTableDataSource(this.images);;
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+    var imagessearch:any[]=[];
+    for(let v of this.images)
+    {
+      if(v.title.includes(filterValue))
+      {
+        imagessearch.push(v);
+      }
+    }
+    this.imagesPagination=imagessearch;
   }
   paginate(event:PageEvent) {
     let startIndex = event.pageSize * event.pageIndex;
