@@ -9,7 +9,7 @@ import {MenuItem} from 'primeng/api';
 export class SidenavComponent implements OnInit {
 
   showFiller = false;
-  items: MenuItem[]=[];
+  items: MenuItem[];
   constructor() { }
 
   ngOnInit(): void {
