@@ -4,6 +4,7 @@
             <img src="assets/images.png" height="40" class="mr-2">
         </ng-template>
         <ng-template pTemplate="end">
+            <i class="pi pi-shopping-cart mr-4 p-text-secondary" pBadge style="font-size: 2rem" [value]="'10+'" severity="danger"></i>
             <p-chip label="zied lahbib" image="assets/images.png" styleClass="mr-2" (click)="menu.toggle($event)"></p-chip>
             <p-menu #menu [popup]="true" [model]="item"></p-menu>
         </ng-template>
