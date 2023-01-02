@@ -43,10 +43,11 @@
 <div>
     <div style="padding:40px ;">
         <div class="example-header" style="margin-left: 50px">
-            <mat-form-field>
-                <mat-label></mat-label>
-                <input matInput (keyup)="applyFilter($event)" placeholder="search" #input style="color: rgb(0, 0, 0);">
-              </mat-form-field>
+
+              <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" pInputText placeholder="Search" (keyup)="applyFilter($event)" />
+            </span>
    
         </div>
         <br>
