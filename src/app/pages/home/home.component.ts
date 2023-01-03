@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectItem } from 'primeng/api';
 import {MatPaginator, PageEvent} from '@angular/material/paginator';
+import { CommandeServiceService } from 'src/app/service/commande-service.service';
 
 
 @Component({
@@ -61,7 +62,7 @@ export class HomeComponent implements OnInit {
         numVisible: 1
     }
 ];
-  constructor() { }
+  constructor(private cs:CommandeServiceService) { }
 
   ngOnInit(): void {
     this.imagesPagination=this.images.slice(this.start, this.end)
@@ -88,4 +89,19 @@ export class HomeComponent implements OnInit {
     }
     this.imagesPagination = this.images.slice(startIndex, endIndex);
   }
+  itemsCart:any[]=[];
+addtoCart(article:any){
+  this.itemsCart=JSON.parse(localStorage.getItem('localCart')|| '{}');
+  this.itemsCart.push(article);
+  console.log("sss",this.itemsCart)
+  localStorage.setItem('localCart',JSON.stringify(this.itemsCart));
+  this.cartNumberFunc();
+}
+cartNumber:number=0;
+cartNumberFunc(){
+  var cartValue=JSON.parse(localStorage.getItem('localCart')|| '{}');
+  this.cartNumber=cartValue.length;
+  console.log(this.cartNumber);
+  this.cs.cartSubject.next(this.cartNumber);
+}
 }

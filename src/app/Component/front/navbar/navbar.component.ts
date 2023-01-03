@@ -1,6 +1,7 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
+import { CommandeServiceService } from 'src/app/service/commande-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,9 +14,16 @@ export class NavbarComponent implements OnInit {
   nom="zied"
   items: MenuItem[] = [];
   item: MenuItem[] = [];
-  constructor() { }
+  constructor(private cs:CommandeServiceService) {
+    this.cs.cartSubject.subscribe(
+        (data)=>{
+            this.cartItem=data;
+        }
+    );
+   }
 
   ngOnInit(): void {
+    this.cartItemFunc();
     this.items = [
       {
           label:'File',
@@ -172,5 +180,16 @@ export class NavbarComponent implements OnInit {
     },
 ];
 }
-
+cartItem:number;
+cartItemFunc(){
+    if(localStorage.getItem('localCart')!=null){
+        var cartCount=JSON.parse(localStorage.getItem('localCart')|| '{}');
+        this.cartItem=cartCount.length;
+        console.log('localstorage',cartCount.length);
+        console.log('localstorage',this.cartItem)
+        
+}else{
+    this.cartItem=0;
+}
+}
 }

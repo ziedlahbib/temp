@@ -32,7 +32,7 @@
                         <span [class]="'product-badge status-'+product.title.toLowerCase()">{{product.title}}</span>
                         <div class="car-buttons mt-5">
                             <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-angle-double-right"></p-button>
-                            <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-shopping-cart"></p-button>
+                            <p-button type="button" (click)="addtoCart(product)" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-shopping-cart"></p-button>
                         </div>
                     </div>
                 </div>
