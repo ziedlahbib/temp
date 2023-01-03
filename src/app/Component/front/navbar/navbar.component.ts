@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { AfterContentInit, Component, NgModule, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
 import { CommandeServiceService } from 'src/app/service/commande-service.service';
@@ -24,6 +24,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartItemFunc();
+    
     this.items = [
       {
           label:'File',

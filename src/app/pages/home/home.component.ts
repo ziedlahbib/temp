@@ -21,31 +21,41 @@ export class HomeComponent implements OnInit {
       previewImageSrc:"assets/téléchargement222.jpg",
       thumbnailImageSrc:"assets/téléchargement222.jpg",
       title:"zied",
-      alt:"zziiieidiidiidi"
+      alt:"zziiieidiidiidi",
+      prix:20
+
     },
     {
       previewImageSrc:"assets/téléchargement222.jpg",
       thumbnailImageSrc:"assets/téléchargement222.jpg",
       title:"ziedsssss",
-      alt:"zziiieidiidiidi"
+      alt:"zziiieidiidiidi",
+      prix:20
+
     },
     {
       previewImageSrc:"assets/téléchargement222.jpg",
       thumbnailImageSrc:"assets/téléchargement222.jpg",
       title:"ziedsssss",
-      alt:"zziiieidiidiidi"
+      alt:"zziiieidiidiidi",
+      prix:20
+
     },
     {
       previewImageSrc:"assets/téléchargement222.jpg",
       thumbnailImageSrc:"assets/téléchargement222.jpg",
       title:"ziedsssss",
-      alt:"zziiieidiidiidi"
+      alt:"zziiieidiidiidi",
+      prix:20
+
     },
     {
       previewImageSrc:"assets/téléchargement222.jpg",
       thumbnailImageSrc:"assets/téléchargement222.jpg",
       title:"ziedsssss",
-      alt:"zziiieidiidiidi"
+      alt:"zziiieidiidiidi",
+      prix:20
+   
     }
   ]
   responsiveOptions:any[] = [
@@ -91,7 +101,7 @@ export class HomeComponent implements OnInit {
   }
   itemsCart:any[]=[];
 addtoCart(article:any){
-  this.itemsCart=JSON.parse(localStorage.getItem('localCart')|| '{}');
+  this.itemsCart=JSON.parse(localStorage.getItem('localCart')|| '[]');
   this.itemsCart.push(article);
   console.log("sss",this.itemsCart)
   localStorage.setItem('localCart',JSON.stringify(this.itemsCart));
@@ -99,7 +109,7 @@ addtoCart(article:any){
 }
 cartNumber:number=0;
 cartNumberFunc(){
-  var cartValue=JSON.parse(localStorage.getItem('localCart')|| '{}');
+  var cartValue=JSON.parse(localStorage.getItem('localCart')|| '[]');
   this.cartNumber=cartValue.length;
   console.log(this.cartNumber);
   this.cs.cartSubject.next(this.cartNumber);

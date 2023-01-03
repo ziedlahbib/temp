@@ -24,7 +24,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {BadgeModule} from 'primeng/badge';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { PanierComponent } from 'src/app/pages/panier/panier.component';
+import { PassercommandedialogComponentComponent } from 'src/app/pages/panier/passercommandedialog-component/passercommandedialog-component.component';
+import {DividerModule} from 'primeng/divider';
 
 
 
@@ -37,6 +40,8 @@ import {BadgeModule} from 'primeng/badge';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
+    PanierComponent,
+    PassercommandedialogComponentComponent,
     
     
     
@@ -63,7 +68,10 @@ import {BadgeModule} from 'primeng/badge';
     MatPaginatorModule,
     MatFormFieldModule,
     MatInputModule,
-    BadgeModule
+    BadgeModule,
+    MatDialogModule,
+    DividerModule
+  
   
   ]
 })
