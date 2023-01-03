@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { CommandeServiceService } from 'src/app/service/commande-service.service';
 import { PassercommandedialogComponentComponent } from './passercommandedialog-component/passercommandedialog-component.component';
 
 @Component({
@@ -9,7 +10,7 @@ import { PassercommandedialogComponentComponent } from './passercommandedialog-c
 })
 export class PanierComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,private cs:CommandeServiceService) { }
 
   ngOnInit(): void {
     this.cartItemFunc();
@@ -33,6 +34,15 @@ delete(){
   localStorage.clear();
   var cartCount=JSON.parse(localStorage.getItem('localCart')||'[]');
           this.cartItem=cartCount;
+          this.prixtotal=0;
+          this.cartNumberFunc();
+}
+cartNumber:number=0;
+cartNumberFunc(){
+  var cartValue=JSON.parse(localStorage.getItem('localCart')|| '[]');
+  this.cartNumber=cartValue.length;
+  console.log(this.cartNumber);
+  this.cs.cartSubject.next(this.cartNumber);
 }
 prixtotal:number=0;
 calculeprixtotal():number{
